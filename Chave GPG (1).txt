@@ -3,3 +3,14 @@ gpg --full-generate-key
 gpg --list-secret-keys --keyid-format=long
 
 gpg --armor --export <chave>
+
+Para assinar todos commits
+
+git config --global commit.gpgsign true
+
+
+git add .
+
+git commit -S -m "YOUR_COMMIT_MESSAGE"
+
+git push
